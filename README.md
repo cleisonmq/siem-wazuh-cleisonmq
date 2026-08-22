@@ -15,6 +15,13 @@ Este repositório contém informações e tutoriais práticos sobre a monitoriza
 ## Ficheiros de Configuração:
 - **No Agente:** `/var/ossec/etc/ossec.conf`
 - **No Servidor (Configuração de Grupo):** `/var/ossec/etc/shared/<nome_do_grupo>/agent.conf` *(ou através do painel Wazuh em Gerenciamento de Grupos)*
+- **Configuração das regras no servidor:** `sudo nano /var/ossec/etc/rules/local_rules.xml` *(ou através do painel Wazuh em Gerenciamento de Grupos)*
+- **Configuração dos decoders no servidor:** `sudo nano /var/ossec/etc/decoders/local_decoder.xml` *(ou através do painel Wazuh em Gerenciamento de Grupos)*
+- **Teste dos decoders e rules no servidor:** `/var/ossec/bin/wazuh-logtest` *(ou através do painel Wazuh em Gerenciamento de Grupos)*
+- **Virificar sintaxe dos decoders e rules:** `/var/ossec/bin/wazuh-analysisd -t` *(ou através do painel Wazuh em Gerenciamento de Grupos)*
+
+## Observaçoes:
+1. Não deve existrir regras com o mesmo ID
 
 ---
 ## 1. Controlo de Integridade de Ficheiros (FIM)
